@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# meta-research-toolkit — self-test gate (PASS/FAIL).
+# Gate = the bun test suite (authoritative). ADDITIVE: commits bin/ + mise.toml
+# only by pathspec — the tracked WIP (moon.yml, package.json) and untracked
+# delendai scaffolding are left to their owner.
+#
+# KNOWN DEFECT (pre-existing, not gated): `bun run typecheck` (tsgo --noEmit)
+# fails on missing @types/node (`process`/`ImportMeta.main` type errors) and a
+# missing `node` types field in tsconfig. Test suite is the durable green gate
+# until the owner fixes the type deps.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+export RUN_FAST_ACTIVE=0
+BUN="${BUN:-/home/toxic/.bun/bin/bun}"; [ -x "$BUN" ] || BUN=bun
+
+echo "== meta-research-toolkit check: start =="
+
+set +e
+out="$("$BUN" test 2>&1)"
+rc=$?
+set -e
+echo "$out"
+
+[ "$rc" -eq 0 ] || { echo "FAIL: bun test rc=$rc"; exit 1; }
+echo "$out" | grep -qiE '[0-9]+ pass|no tests' || { echo "FAIL: no pass marker"; exit 1; }
+
+echo "== meta-research-toolkit check: PASS =="
+exit 0

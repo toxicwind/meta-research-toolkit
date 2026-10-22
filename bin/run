@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# meta-research-toolkit — primary operation: run the research-toolkit
+# (TypeScript entrypoint + Python fsbus orchestrator + Perl lint helper).
+#
+# Usage:
+#   bin/run                    # run the TS entrypoint (src/typescript/index.ts)
+#   bin/run check              # fast gate: bun test (13/13) + source presence
+#   bin/run pyfsbus            # run the python fsbus orchestrator
+set -euo pipefail
+cd "$(dirname "$0")/.."
+export RUN_FAST_ACTIVE=0
+BUN="${BUN:-/home/toxic/.bun/bin/bun}"; [ -x "$BUN" ] || BUN=bun
+
+case "${1:-run}" in
+  check) exec ./bin/check ;;
+  run)
+    [ -f src/typescript/index.ts ] || { echo "FAIL: src/typescript/index.ts missing"; exit 1; }
+    exec "$BUN" run src/typescript/index.ts
+    ;;
+  pyfsbus)
+    exec python3 src/python/fsbus_orchestrator.py
+    ;;
+  *)
+    echo "usage: bin/run [run|pyfsbus|check]"; exit 2
+    ;;
+esac
