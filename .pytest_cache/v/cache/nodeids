@@ -1,0 +1,14 @@
+[
+  "tests/python/test_lottery.py::test_casino_cash_chips_positive_ev",
+  "tests/python/test_lottery.py::test_jumbo_bucks_neutral",
+  "tests/python/test_lottery.py::test_mad_money_negative",
+  "tests/python/test_lottery.py::test_top_equity_zero_when_exhausted",
+  "tests/python/test_orchestrator.py::test_claim_is_exclusive",
+  "tests/python/test_orchestrator.py::test_finish_moves_to_outbox",
+  "tests/python/test_orchestrator.py::test_retry_bounded",
+  "tests/python/test_orchestrator.py::test_submit_creates_task",
+  "tests/python/test_refusal.py::test_classify_prompt_risk",
+  "tests/python/test_refusal.py::test_is_porous",
+  "tests/python/test_refusal.py::test_refusal_vector_cosine",
+  "tests/python/test_refusal.py::test_routing_failure_score"
+]

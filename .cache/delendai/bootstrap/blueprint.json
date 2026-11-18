@@ -1,0 +1,136 @@
+{
+	"generatedAt": "2026-10-21T04:10:35.349Z",
+	"blueprint": {
+		"serverName": "mcp-project-meta",
+		"namespacePrefix": "meta",
+		"targetDir": ".",
+		"projectType": "library",
+		"plugins": [
+			"rules"
+		],
+		"tools": [
+			{
+				"name": "check_project_state",
+				"description": "Single source of truth the agent calls first each turn: returns conventions, gates and what to do next."
+			},
+			{
+				"name": "get_validation_matrix",
+				"description": "Returns the quality-gate commands per scope."
+			},
+			{
+				"name": "audit_public_api",
+				"description": "Flags breaking changes to the exported surface."
+			},
+			{
+				"name": "run_lint",
+				"description": "Run the project's lint command and return a structured pass/fail report."
+			},
+			{
+				"name": "run_test",
+				"description": "Run the project's test command and return a structured pass/fail report."
+			},
+			{
+				"name": "run_build",
+				"description": "Run the project's build command and return a structured pass/fail report."
+			},
+			{
+				"name": "run_dev",
+				"description": "Run the project's dev command and return a structured pass/fail report."
+			}
+		],
+		"prompts": [
+			{
+				"name": "start",
+				"description": "Orient and start working in this project.",
+				"body": "You are working in **meta-research-toolkit** (`library`, `typescript`).\n\nFirst call `meta_overview` — it is the canonical map of this server's tools, plugins and a `recommendedNextAction`. Follow the recommendation.\n\n## Project shape\n\n- Type: `library`\n- Framework: _(none detected)_\n- Monorepo tool: _(none)_\n- Test runner: `bun`\n- Package manager: `bun`\n\n## Quality gates\n\n- `lint` → `bunx tsc --noEmit`\n- `test` → `bun test --coverage`\n- `build` → `bun build src/typescript/index.ts --outdir dist`\n- `dev` → `bun run src/typescript/index.ts`\n\n## When you change the project\n\n1. Re-run `meta_analyze_project` to refresh the analysis.\n2. If the project grew (new scripts, new framework deps, new monorepo packages), call `meta_plan_mcp_project` to refresh the blueprint and `meta_create_project` to materialise the new tools.\n3. Never invent tool names; only call what `overview` lists."
+			},
+			{
+				"name": "fix quality",
+				"description": "Run the gates and fix what fails.",
+				"body": "Run the project quality gates in this order and fix what fails:\n1. `lint` → `bunx tsc --noEmit`\n1. `test` → `bun test --coverage`\n1. `build` → `bun build src/typescript/index.ts --outdir dist`\n1. `dev` → `bun run src/typescript/index.ts`\n\nIf a gate is broken because of an external dep (downstream service, network, missing env), record it as `external-gate-blocker` with the evidence and continue."
+			}
+		],
+		"skills": [
+			{
+				"name": "project standards",
+				"description": "Closed stack and conventions of the project.",
+				"body": "## Project facts\n\n- Name: `meta-research-toolkit`\n- Type: `library`\n- Language: `typescript`\n- Framework: `(none)`\n- Monorepo: `(none)`\n- Package manager: `bun`\n- Test runner: `bun`\n- MCP server: _not detected_\n- CI: _(none detected)_\n- Agent configs already in repo: _(none detected)_\n\n## Language conventions\n\n- `strict: true` in tsconfig — no implicit any.\n- Prefer `readonly` and discriminated unions over enums.\n\n",
+				"whenToUse": [
+					"Before writing or reviewing code in this project.",
+					"When a code review questions a project-wide convention."
+				]
+			}
+		],
+		"agents": [
+			{
+				"slot": "orchestrator",
+				"description": "Root orchestrator for this project."
+			}
+		],
+		"tests": true,
+		"hasExistingServer": false,
+		"adoptionStrategy": {
+			"mode": "replace",
+			"selectedCapabilities": [
+				"tools",
+				"prompts",
+				"resources",
+				"knowledge",
+				"skills",
+				"agents",
+				"mcp-config",
+				"proposal-workflow"
+			],
+			"operations": [
+				{
+					"capability": "tools",
+					"action": "replace"
+				},
+				{
+					"capability": "prompts",
+					"action": "replace"
+				},
+				{
+					"capability": "resources",
+					"action": "replace"
+				},
+				{
+					"capability": "knowledge",
+					"action": "replace"
+				},
+				{
+					"capability": "skills",
+					"action": "replace"
+				},
+				{
+					"capability": "agents",
+					"action": "replace"
+				},
+				{
+					"capability": "mcp-config",
+					"action": "replace"
+				},
+				{
+					"capability": "proposal-workflow",
+					"action": "replace"
+				}
+			],
+			"protectedCapabilities": [],
+			"requiresExplicitReplacementConsent": false
+		},
+		"defaults": {
+			"keepLegacy": false,
+			"reasons": [
+				"greenfield-safe default"
+			],
+			"warnings": []
+		},
+		"notes": [
+			"Guard the public barrel; treat exports as a contract.",
+			"Run typecheck + tests as the gate before publish.",
+			"No MCP server found: create one from this blueprint (scaffold the host project, then each tool/prompt/skill/agent).",
+			"Generate a test alongside each tool.",
+			"Recommended keepLegacy=false: greenfield-safe default."
+		]
+	}
+}

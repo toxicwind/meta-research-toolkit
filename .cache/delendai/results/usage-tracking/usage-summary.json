@@ -1,0 +1,323 @@
+{
+	"updatedAt": "2026-10-22T07:03:14.575Z",
+	"windowDays": 7,
+	"totals": {
+		"calls": 1,
+		"inputTokens": 0,
+		"outputTokens": 0,
+		"totalTokens": 0,
+		"costUsd": 0,
+		"tokensSaved": 0,
+		"savingsPercent": 0,
+		"errors": 0,
+		"autoBypassed": 0
+	},
+	"byProvider": [
+		{
+			"key": "unknown",
+			"calls": 1,
+			"inputTokens": 0,
+			"outputTokens": 0,
+			"totalTokens": 0,
+			"costUsd": 0,
+			"tokensSaved": 0,
+			"savingsPercent": 0,
+			"errors": 0,
+			"autoBypassed": 0
+		}
+	],
+	"byPlugin": [
+		{
+			"key": "core",
+			"calls": 1,
+			"inputTokens": 0,
+			"outputTokens": 0,
+			"totalTokens": 0,
+			"costUsd": 0,
+			"tokensSaved": 0,
+			"savingsPercent": 0,
+			"errors": 0,
+			"autoBypassed": 0
+		}
+	],
+	"byAgent": [
+		{
+			"key": "unknown",
+			"calls": 1,
+			"inputTokens": 0,
+			"outputTokens": 0,
+			"totalTokens": 0,
+			"costUsd": 0,
+			"tokensSaved": 0,
+			"savingsPercent": 0,
+			"errors": 0,
+			"autoBypassed": 0
+		}
+	],
+	"byExtension": [
+		{
+			"key": "unknown",
+			"calls": 1,
+			"inputTokens": 0,
+			"outputTokens": 0,
+			"totalTokens": 0,
+			"costUsd": 0,
+			"tokensSaved": 0,
+			"savingsPercent": 0,
+			"errors": 0,
+			"autoBypassed": 0
+		}
+	],
+	"pluginKpis": [
+		{
+			"plugin": "core",
+			"observedCalls": 1,
+			"observedSessions": 1,
+			"tokenTax": {
+				"plugin": "core",
+				"staticSchemaBytes": 1408,
+				"compactTypicalBytes": 64,
+				"p95ResponseBytes": 64,
+				"estimated": false,
+				"observedToolCount": 1,
+				"observedResponseSamples": 1,
+				"sources": {
+					"staticSchemaBytes": "derived-from-observed-distinct-tools",
+					"compactTypicalBytes": "observed-response-bytes-p50",
+					"p95ResponseBytes": "observed-response-bytes-p95"
+				},
+				"totalBytes": 1536
+			},
+			"utilityPer1kTokens": 2.6042,
+			"kpis": {
+				"schemaBytes": 1408,
+				"invocationRatePerDay": 0.1429,
+				"successContribution": 1,
+				"responseBytesP50": 64,
+				"responseBytesP95": 64,
+				"latencyMsP50": 13,
+				"latencyMsP95": 13,
+				"toolErrorRate": 0,
+				"pluginActivationRate": 1,
+				"dynamicActivationSavingsBytes": 0,
+				"memoryCompactionSavingsTokens": 0,
+				"contextRehydrationEffectiveness": null,
+				"contextRehydrationEffectivenessNote": "usage-tracking does not record a resume-success signal after rehydration; only raw invocation metadata is available locally.",
+				"privacyGateBlockedReportCount": null,
+				"privacyGateBlockedReportCountNote": "usage-tracking does not currently emit a local blocked-report counter, so this KPI remains intentionally null."
+			}
+		}
+	],
+	"kpis": {
+		"coldStartCostBytes": 1408,
+		"coldStartCostTokens": 352,
+		"coldStartCostNote": "Derived from observed plugins only. Unloaded or never-invoked plugins are intentionally invisible to this local aggregate.",
+		"invocationRatePerDay": 0.1429,
+		"successfulCallRate": 1,
+		"responseBytesP50": 64,
+		"responseBytesP95": 64,
+		"latencyMsP50": 13,
+		"latencyMsP95": 13,
+		"toolErrorRate": 0,
+		"averagePluginActivationRate": 1,
+		"dynamicActivationSavingsBytes": 0,
+		"memoryCompactionSavingsTokens": 0,
+		"memoryCompactionSavingsNote": "Summed from locally stamped tokensSaved counters only; usage-tracking never inspects prompts, args or outputs.",
+		"contextRehydrationEffectiveness": null,
+		"contextRehydrationEffectivenessNote": "No local signal links a rehydration event to subsequent task success, so this KPI remains intentionally null.",
+		"privacyGateBlockedReportCount": null,
+		"privacyGateBlockedReportCountNote": "No local blocked-report counter is emitted today, so this KPI remains intentionally null."
+	},
+	"autoBypassed": 0,
+	"limitsStatus": {
+		"sessionSpendUsd": 0,
+		"sessionLimitUsd": null,
+		"sessionLimitPct": null,
+		"monthlySpendUsd": 0,
+		"monthlyLimitUsd": null,
+		"monthlyLimitPct": null,
+		"breached": null
+	},
+	"degradations": [],
+	"invocationTelemetry": {
+		"generatedAt": "2026-10-22T07:03:14.575Z",
+		"windowDays": 7,
+		"totals": {
+			"calls": 1,
+			"successfulCalls": 1,
+			"failedCalls": 0,
+			"retries": 0,
+			"iterationsObserved": 0,
+			"inputTokens": 0,
+			"outputTokens": 0,
+			"totalTokens": 0,
+			"costUsd": 0,
+			"averageLatencyMs": 13,
+			"p50LatencyMs": 13,
+			"p95LatencyMs": 13,
+			"withCorrelation": 0,
+			"schemaIncongruences": 0
+		},
+		"byPlugin": [
+			{
+				"key": "core",
+				"calls": 1,
+				"successfulCalls": 1,
+				"failedCalls": 0,
+				"retries": 0,
+				"iterationsObserved": 0,
+				"inputTokens": 0,
+				"outputTokens": 0,
+				"totalTokens": 0,
+				"costUsd": 0,
+				"averageLatencyMs": 13,
+				"p50LatencyMs": 13,
+				"p95LatencyMs": 13,
+				"lastSeenAt": "2026-10-21T04:11:36.340Z",
+				"latestCorrelationId": null,
+				"latestError": null
+			}
+		],
+		"byTool": [
+			{
+				"key": "core/overview",
+				"calls": 1,
+				"successfulCalls": 1,
+				"failedCalls": 0,
+				"retries": 0,
+				"iterationsObserved": 0,
+				"inputTokens": 0,
+				"outputTokens": 0,
+				"totalTokens": 0,
+				"costUsd": 0,
+				"averageLatencyMs": 13,
+				"p50LatencyMs": 13,
+				"p95LatencyMs": 13,
+				"lastSeenAt": "2026-10-21T04:11:36.340Z",
+				"latestCorrelationId": null,
+				"latestError": null
+			}
+		],
+		"byModel": [
+			{
+				"key": "unattributed",
+				"calls": 1,
+				"successfulCalls": 1,
+				"failedCalls": 0,
+				"retries": 0,
+				"iterationsObserved": 0,
+				"inputTokens": 0,
+				"outputTokens": 0,
+				"totalTokens": 0,
+				"costUsd": 0,
+				"averageLatencyMs": 13,
+				"p50LatencyMs": 13,
+				"p95LatencyMs": 13,
+				"lastSeenAt": "2026-10-21T04:11:36.340Z",
+				"latestCorrelationId": null,
+				"latestError": null
+			}
+		],
+		"byAgent": [
+			{
+				"key": "unknown",
+				"calls": 1,
+				"successfulCalls": 1,
+				"failedCalls": 0,
+				"retries": 0,
+				"iterationsObserved": 0,
+				"inputTokens": 0,
+				"outputTokens": 0,
+				"totalTokens": 0,
+				"costUsd": 0,
+				"averageLatencyMs": 13,
+				"p50LatencyMs": 13,
+				"p95LatencyMs": 13,
+				"lastSeenAt": "2026-10-21T04:11:36.340Z",
+				"latestCorrelationId": null,
+				"latestError": null
+			}
+		],
+		"byRequestType": [
+			{
+				"key": "query",
+				"calls": 1,
+				"successfulCalls": 1,
+				"failedCalls": 0,
+				"retries": 0,
+				"iterationsObserved": 0,
+				"inputTokens": 0,
+				"outputTokens": 0,
+				"totalTokens": 0,
+				"costUsd": 0,
+				"averageLatencyMs": 13,
+				"p50LatencyMs": 13,
+				"p95LatencyMs": 13,
+				"lastSeenAt": "2026-10-21T04:11:36.340Z",
+				"latestCorrelationId": null,
+				"latestError": null
+			}
+		],
+		"byOutcome": [
+			{
+				"key": "success",
+				"calls": 1,
+				"successfulCalls": 1,
+				"failedCalls": 0,
+				"retries": 0,
+				"iterationsObserved": 0,
+				"inputTokens": 0,
+				"outputTokens": 0,
+				"totalTokens": 0,
+				"costUsd": 0,
+				"averageLatencyMs": 13,
+				"p50LatencyMs": 13,
+				"p95LatencyMs": 13,
+				"lastSeenAt": "2026-10-21T04:11:36.340Z",
+				"latestCorrelationId": null,
+				"latestError": null
+			}
+		],
+		"byError": [
+			{
+				"key": "none",
+				"calls": 1,
+				"successfulCalls": 1,
+				"failedCalls": 0,
+				"retries": 0,
+				"iterationsObserved": 0,
+				"inputTokens": 0,
+				"outputTokens": 0,
+				"totalTokens": 0,
+				"costUsd": 0,
+				"averageLatencyMs": 13,
+				"p50LatencyMs": 13,
+				"p95LatencyMs": 13,
+				"lastSeenAt": "2026-10-21T04:11:36.340Z",
+				"latestCorrelationId": null,
+				"latestError": null
+			}
+		],
+		"byDay": [
+			{
+				"key": "2026-10-21",
+				"calls": 1,
+				"successfulCalls": 1,
+				"failedCalls": 0,
+				"retries": 0,
+				"iterationsObserved": 0,
+				"inputTokens": 0,
+				"outputTokens": 0,
+				"totalTokens": 0,
+				"costUsd": 0,
+				"averageLatencyMs": 13,
+				"p50LatencyMs": 13,
+				"p95LatencyMs": 13,
+				"lastSeenAt": "2026-10-21T04:11:36.340Z",
+				"latestCorrelationId": null,
+				"latestError": null
+			}
+		],
+		"issues": []
+	}
+}

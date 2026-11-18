@@ -1,0 +1,55 @@
+2026-10-21T04:11:34.947Z cli-serve#1695793 --- server started (cli-serve) ---
+2026-10-21T04:11:34.951Z cli-serve#1695793 [delendai] guard hooks /home/toxic/estate/ranch/meta-research-toolkit/.git/hooks
+2026-10-21T04:11:34.951Z cli-serve#1695793 [delendai]   pre-commit: installed
+2026-10-21T04:11:34.951Z cli-serve#1695793 [delendai]   commit-msg: installed
+2026-10-21T04:11:34.951Z cli-serve#1695793 [delendai]   reference-transaction: installed
+2026-10-21T04:11:34.951Z cli-serve#1695793 [delendai]   pre-push: installed
+2026-10-21T04:11:34.951Z cli-serve#1695793 [delendai]   post-checkout: installed
+2026-10-21T04:11:34.951Z cli-serve#1695793 [delendai]   post-merge: installed
+2026-10-21T04:11:34.951Z cli-serve#1695793 [delendai] work refs will be named `unknown-agent` — no model or agent is declared here.
+2026-10-21T04:11:34.952Z cli-serve#1695793 [delendai]       fix: set DELENDAI_AGENT_ID to the exact model doing the work (e.g. claude-opus-5).
+2026-10-21T04:11:35.289Z cli-serve#1695793 [delendai] work doctor: 1 of 12 workflow invariant(s) do not hold — run `delendai work doctor`
+2026-10-21T04:11:35.289Z cli-serve#1695793 [delendai]   ✗ checkout-clean: 10 path(s): M moon.yml, ?? .claude/, ?? .codex/, ?? .envrc, ?? .github/
+2026-10-21T04:11:35.289Z cli-serve#1695793 [delendai]       fix: git restore --staged --worktree -- <path>
+2026-10-21T04:11:35.723Z cli-serve#1695793 [delendai] No component commits finished slices: `commit-policy` is not persisting them (absent, or `commit.enabled` false / no slice trigger) and `proposals.persist.mode` is unset or "none".
+2026-10-21T04:11:35.723Z cli-serve#1695793 [delendai] Slices will complete and their work will stay uncommitted, so no proposal can produce the `shipped-in` SHA its closing gate requires. Either enable `plugins.commit-policy.options.commit` with a slice trigger, or set `plugins.proposals.options.persist.mode` to "commit" (or "commit-and-push"). If you commit by hand, this is expected.
+2026-10-21T04:11:35.724Z cli-serve#1695793 [delendai] error-reporting is ON: delendai bugs are reported automatically as de-duplicated issues on CartagoGit/delendai.
+2026-10-21T04:11:35.724Z cli-serve#1695793 [delendai] Only delendai-internal errors are sent (error type, delendai stack frames, versions) — never your code, file contents, paths, branch names, environment or project data.
+2026-10-21T04:11:35.724Z cli-serve#1695793 [delendai] To turn it off, set `plugins.error-reporting.options.enabled = false` in delendai.config.json.
+2026-10-21T04:11:36.291Z cli-serve#1695793 === Server summary ===
+2026-10-21T04:11:36.291Z cli-serve#1695793   What is running, which surface is exposed, and how tools are loaded.
+2026-10-21T04:11:36.291Z cli-serve#1695793 [info] DelendAI ready
+2026-10-21T04:11:36.291Z cli-serve#1695793 version        0.1.0
+2026-10-21T04:11:36.291Z cli-serve#1695793 workspace      /home/toxic/estate/ranch/meta-research-toolkit
+2026-10-21T04:11:36.291Z cli-serve#1695793 preset         custom
+2026-10-21T04:11:36.291Z cli-serve#1695793 surface        managed · lazy loading enabled
+2026-10-21T04:11:36.291Z cli-serve#1695793 tools          7 visible / 232 available
+2026-10-21T04:11:36.291Z cli-serve#1695793 plugins        38 configured · 0 loaded · 0 warm
+2026-10-21T04:11:36.291Z cli-serve#1695793   reason: managed by default at boot; the per-client mode is decided at MCP handshake from client capabilities (see stderr for the resolved reason)
+2026-10-21T04:11:36.291Z cli-serve#1695793 report         medium (default)
+2026-10-21T04:11:36.291Z cli-serve#1695793 
+2026-10-21T04:11:36.291Z cli-serve#1695793 === Available capabilities ===
+2026-10-21T04:11:36.291Z cli-serve#1695793   The skills and resources that can be requested when needed.
+2026-10-21T04:11:36.291Z cli-serve#1695793 skills        8 available · 0 preloaded
+2026-10-21T04:11:36.291Z cli-serve#1695793 resources     12 available
+2026-10-21T04:11:36.291Z cli-serve#1695793 
+2026-10-21T04:11:36.291Z cli-serve#1695793 === Context cost per request ===
+2026-10-21T04:11:36.291Z cli-serve#1695793   The schema tokens sent to the model for the visible tool surface.
+2026-10-21T04:11:36.291Z cli-serve#1695793 visible tools  ~1,858 tokens · 7.3 KiB of schemas
+2026-10-21T04:11:36.291Z cli-serve#1695793 full surface   ~20,177 tokens
+2026-10-21T04:11:36.291Z cli-serve#1695793 saved          ~18,319 tokens · 90.8%
+2026-10-21T04:11:36.291Z cli-serve#1695793 
+2026-10-21T04:11:36.291Z cli-serve#1695793 === Plugin loading ===
+2026-10-21T04:11:36.291Z cli-serve#1695793   Plugins loaded now and plugins waiting for their first use.
+2026-10-21T04:11:36.291Z cli-serve#1695793   loaded at startup (1): core
+2026-10-21T04:11:36.291Z cli-serve#1695793   lazy loaded on demand (38): adaptive-optimizer, audit, auto-agent-selector, auto-plugin-selector, commit-policy, completion, container, conventions, context-for-change, deps, diagram, docs, env, forge, git, i18n, impact-analysis, project-health, quality-policy, link-check, logs, memory, notification, orchestrator-runner, agent-orchestrator, perf, proposals, project-kpis, quality, rules, search, security, status-marker, tech-debt, test-convention, test-policy, usage-tracking, error-reporting
+2026-10-21T04:11:36.291Z cli-serve#1695793 
+2026-10-21T04:11:36.291Z cli-serve#1695793 === Managed runtime ===
+2026-10-21T04:11:36.291Z cli-serve#1695793   Runtime policies for lazy activation, eviction, and MCP surface refreshes.
+2026-10-21T04:11:36.291Z cli-serve#1695793 lazy activation      enabled
+2026-10-21T04:11:36.291Z cli-serve#1695793 module loading       lazy
+2026-10-21T04:11:36.291Z cli-serve#1695793 internal routing     enabled
+2026-10-21T04:11:36.291Z cli-serve#1695793 idle eviction        5m
+2026-10-21T04:11:36.291Z cli-serve#1695793 max warm plugins     8
+2026-10-21T04:11:36.291Z cli-serve#1695793 list_changed needed  yes
+2026-10-21T04:11:36.291Z cli-serve#1695793 

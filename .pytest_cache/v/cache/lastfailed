@@ -1,0 +1,5 @@
+{
+  "tests/python/test_lottery.py": true,
+  "tests/python/test_orchestrator.py": true,
+  "tests/python/test_refusal.py": true
+}

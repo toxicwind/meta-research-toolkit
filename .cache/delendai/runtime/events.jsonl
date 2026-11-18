@@ -1,0 +1,12 @@
+{"version":1,"ts":"2026-10-21T04:10:35.240Z","kind":"session.started","meta":{"mode":"managed","workspace":"/home/toxic/estate/ranch/meta-research-toolkit"},"sessionId":"mvhlgmlk-26ecb51d55"}
+{"version":1,"ts":"2026-10-21T04:10:35.379Z","kind":"tool.started","toolName":"delendai_resolve_capability","sessionId":"mvhlgmlk-26ecb51d55"}
+{"version":1,"ts":"2026-10-21T04:10:35.381Z","kind":"tool.started","toolName":"delendai_adopt_project","sessionId":"mvhlgmlk-26ecb51d55"}
+{"version":1,"ts":"2026-10-21T04:10:35.400Z","kind":"tool.completed","toolName":"delendai_adopt_project","elapsedMs":18.10708099999988,"error":false,"estimatedTokens4B":5627,"sessionId":"mvhlgmlk-26ecb51d55"}
+{"version":1,"ts":"2026-10-21T04:10:35.400Z","kind":"tool.completed","toolName":"delendai_resolve_capability","elapsedMs":21.71628099999998,"error":false,"estimatedTokens4B":11742,"sessionId":"mvhlgmlk-26ecb51d55"}
+{"version":1,"ts":"2026-10-21T04:11:17.177Z","kind":"session.started","meta":{"mode":"managed","workspace":"/home/toxic/estate/ranch/meta-research-toolkit"},"sessionId":"mvhlhiyh-35c374ea27"}
+{"version":1,"ts":"2026-10-21T04:11:17.267Z","kind":"tool.started","toolName":"delendai_overview","sessionId":"mvhlhiyh-35c374ea27"}
+{"version":1,"ts":"2026-10-21T04:11:17.275Z","kind":"tool.completed","toolName":"delendai_overview","elapsedMs":7.673533000000134,"error":false,"estimatedTokens4B":209,"sessionId":"mvhlhiyh-35c374ea27"}
+{"version":1,"ts":"2026-10-21T04:11:36.038Z","kind":"session.started","meta":{"mode":"managed","workspace":"/home/toxic/estate/ranch/meta-research-toolkit"},"sessionId":"mvhlhxie-17c090ce32"}
+{"version":1,"ts":"2026-10-21T04:11:36.327Z","kind":"tool.started","toolName":"delendai_overview","sessionId":"mvhlhxie-17c090ce32"}
+{"version":1,"ts":"2026-10-21T04:11:36.340Z","kind":"tool.completed","toolName":"delendai_overview","elapsedMs":12.448407999999745,"error":false,"estimatedTokens4B":344,"sessionId":"mvhlhxie-17c090ce32"}
+{"version":1,"ts":"2026-10-22T07:03:14.601Z","kind":"session.started","meta":{"mode":"managed","workspace":"/home/toxic/estate/ranch/meta-research-toolkit"},"sessionId":"mvj72ill-d7311c8d51"}
